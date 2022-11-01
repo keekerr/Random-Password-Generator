@@ -20,11 +20,13 @@ function retrieveRandomItem(list){
 // Crewate a function that feeds the password variable.
 function generatePassword() {
 // create variables for the messages that need to be produced in the prompt boxes of the generator.
-    var userChoice = prompt("How many characters should your Password Contain?")
+    var input = prompt("How many characters should your Password Contain?")    
     var numbers = confirm ("Should your Password Contain Numbers? Click Ok  for Yes or Cancel for No.")
     var charactersSp = confirm ("Should your Password Contain Special Characters? Click Ok  for Yes or Cancel for No.")
     var lettersLower = confirm ("Should your Password Contain Lower Case Letters? Click Ok  for Yes or Cancel for No.")
     var lettersUpper = confirm ("Should your Password Contain Upper Case Letters? Click Ok  for Yes or Cancel for No.")
+
+    var passLength = parseInt(input)
 
 // input the content for the variables .
     var numberList = ["0", "1", "2", "3", "4", "5", "6","7","8","9"]
@@ -65,11 +67,11 @@ function generatePassword() {
     }
     console.log(contentOptions)
 
-    var generatedPassword = ""
+    return generatedPassword = ""
 
     for (var i = 0; i < passLength; i++) {
-        var randomContentList = randomContentItem(contentOptions)
-        var randomCharacters = randomContentItem(randomizedList);
+        var randomContentList = retrieveRandomItem(contentOptions)
+        var randomCharacters = retrieveRandomItem(randomizedList);
 
         return generatedPassword
     }
@@ -86,3 +88,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
