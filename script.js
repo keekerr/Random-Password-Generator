@@ -1,6 +1,23 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Crewate a function that feeds the password variable.
+function generatePassword() {
+
+// create variables for the messages that need to be produced in the prompt boxes of the generator.
+    var user = prompt("Number of Characters Contained within your Password")
+    var numbers = confirm ("Should your Password Contain Numbers? Click Ok  for Yes or Cancel for No.")
+    var charactersSp = confirm ("Should your Password Contain Special Characters? Click Ok  for Yes or Cancel for No.")
+    var lettersLower = confirm ("Should your Password Contain Lower Case Letters? Click Ok  for Yes or Cancel for No.")
+    var lettersUpper = confirm ("Should your Password Contain Upper Case Letters? Click Ok  for Yes or Cancel for No.")
+    
+// input the content for the variables .
+    var numberList = ["0", "1", "2", "3", "4", "5", "6","7","8","9"]
+    var charactersSpList = ["!", "@", "#", "$", "%", "&", "*", "?"]
+    var lettersLowerList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    var lettersUpperList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -17,5 +34,4 @@ generateBtn.addEventListener("click", writePassword);
 // Criteria 3: Prompts should included questions about password length (8-128), lower case, upper case, special characters and numbers
 // Criteria 4: The prompt concerning length is mandatory to fill out. In addition, at minimum one of the other specifications must be filled out for the application to create a password.
 // Criteria 5: Generated password must inlcude examples of all selected password specification.
-// Criteria 6: Generated password must appear either on the screen in the premade password box or in an alert box
-
+// Criteria 6: Generated password must appear either on the screen in the premade password box or in an alert box.
